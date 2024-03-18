@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular notas</title>
+</head>
+<style>
+body{
+    background: rgb(255,145,193);
+    background: radial-gradient(circle, rgba(255,145,193,1) 0%, rgba(208,164,231,1) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 30px;
+    padding: 60px 60px;
+    color: white;
+    font-weight: 700;
+    background-color:  rgba(208,164,231,0.7);
+    box-shadow:  rgba(0, 0, 0, 0.024) 0px 0px 0px 1px,
+            rgba(0, 0, 0, 0.05) 0px 1px 0px 0px,
+            rgba(0, 0, 0, 0.03) 0px 0px 8px 0px,
+            rgba(0, 0, 0, 0.1) 0px 20px 30px 0px;
+    
+}
+.span-container{
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+    
+
+</style>
+<body>
+    
+    <div class="main-container">
+      <h3>Cáculo da nota do aluno!</h3>
+        <div class="span-container">
+            <span>Nota na listas de exercícios = 9.0</span>
+            <span>Nota no projeto prático = 7.5</span>
+            <span>Sabe-se que os exercícios tem peso 3 e o projeto peso 7</span>
+            <span id="total">Baseados nessas informações, sua nota final é de: </span>
+        </div>      
+    </div>  
+</body>
+    <script>
+        var notap = 7.5;
+        var notal = 9.0;
+
+         var notaFinal = ((notap * 0.7) + (notal * 0.3)).toFixed(2);
+
+        document.getElementById('total').innerHTML += notaFinal;
+    </script>
+</html>

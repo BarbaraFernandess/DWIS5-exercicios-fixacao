@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salário total</title>
+</head>
+
+<style>
+    body{
+        background: rgb(255,145,193);
+        background: radial-gradient(circle, rgba(255,145,193,1) 0%, rgba(208,164,231,1) 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 30px;
+        padding: 60px 60px;
+        color: white;
+        font-weight: 700;
+        background-color:  rgba(208,164,231,0.7);
+        box-shadow:  rgba(0, 0, 0, 0.024) 0px 0px 0px 1px,
+                rgba(0, 0, 0, 0.05) 0px 1px 0px 0px,
+                rgba(0, 0, 0, 0.03) 0px 0px 8px 0px,
+                rgba(0, 0, 0, 0.1) 0px 20px 30px 0px;
+        
+    }
+</style>
+<body>
+    <div class="main-container">
+        <span>O salário fixo é de R$1.500,00</span>
+        <span>O valor das vendas é de R$10.000,00</span>
+        <span>Sua porcentagem de comissão é de 4% do valor total vendido</span>
+        <span id="total">Baseados nessas informações, seu salário total é de: R$</span>
+    </div>  
+    <script>
+        var salario = 1500;
+        let vendas = 10000;
+
+        let comissao = salario + (vendas * 0.04);
+
+        document.getElementById('total').innerHTML += comissao;
+    </script> 
+</body>
+</html>

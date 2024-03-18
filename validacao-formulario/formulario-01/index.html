@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Validação formulário</title>
+</head>
+ <div class="main-container">
+            <form action="" id="f1">
+                <label for="name">Nome:
+                    <input type="text" name="name" id="input-name" pattern="[A-Za-z]{2,}\s[A-Za-z]{2,}(\s[A-Za-z]*)" required="required" title="O nome e o sobrenome devem ter no mínimo 2 dígitos">
+                </label>
+                <label for="photo">Envio de foto:
+                    <input type="file" name="photo" accept="image/*" required="required">
+                </label>
+                <label for="rg">Digite o RG:
+                    <input type="text" name="rg" required="required" pattern="(\d{2})\.(\d{3})\.(\d{3})\-(\d{1}|X)" title="O formato deve ser XX-XXX-XXX-X">
+                </label>
+                <label for="placa">Digite a placa:
+                    <input type="text" name="placa" pattern="([A-Z]{3})\-(\d{4})" title="O formato deve ser AAA-0000">
+                </label>
+                    <input type="submit" name="send" value="Enviar">
+            </form>
+    </div>
+    
+<body>
+    
+</body>
+</html>

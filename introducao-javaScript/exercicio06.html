@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de segundos</title>
+</head>
+<style>
+    body{
+        background: rgb(255,145,193);
+        background: radial-gradient(circle, rgba(255,145,193,1) 0%, rgba(208,164,231,1) 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-container{
+        border-radius: 30px;
+        padding: 60px 60px;
+        height: 7rem;
+        color: white;
+        font-weight: 700;
+        background-color:  rgba(208,164,231, 0.5);
+        box-shadow: rgba(0, 0, 0, 0.03) 0px 2px 8px 0px,
+                    rgba(0, 0, 0, 0.05) 0px 1px 0px 0px,
+                    rgba(0, 0, 0, 0.03) 0px 0px 8px 0px,
+                    rgba(0, 0, 0, 0.1) 0px 20px 30px 0px;
+        
+    }
+    form{
+        padding: 30px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    input{
+        opacity: 0.5;
+        border-radius: 7px;
+        border: none;
+        margin-bottom: 5px;
+        font-size: 20px;
+    }
+
+    label{
+        font-size: 20px;
+    }
+    button{
+        padding: 5px 15px;
+        border-radius: 10px;
+        font-size: 15px;
+        border: solid 3px rgb(223, 116, 223);;
+        font-weight: 600;
+        color: rgb(223, 116, 223);
+        margin-bottom: 0;
+
+        &:hover{
+            color: white;
+            background-color: rgb(223, 116, 223);
+        }
+    }
+    span{
+        display: flex;
+        flex-direction: row;
+    }
+</style>
+<body>
+    <div class="main-container">
+        <form action="">
+            <label for="segundos">Segundos: 
+                <input type="number" min="0" id="segundos">
+            </label>
+            <button type="button" onclick="calcularhoras()">Enviar</button>
+                <span id="info"></span>
+        </form>
+    </div> 
+</body>
+<script>
+
+function calcularhoras(){
+
+    var segundos = document.getElementById('segundos').value;
+
+    if(!isNaN(segundos) && segundos > 0){
+        var horas = Math.floor(segundos / 3600);
+        var minutos = Math.floor((segundos % 3600) / 60);
+        var seg = Math.floor(segundos % 60);
+    
+        document.getElementById('info').innerHTML = `${horas} hora(s), ${minutos} minuto(s) e ${seg} segundo(s)`
+
+    }else{
+        alert('Você tem que inserir um número!')
+    }
+
+}
+
+</script>
+</html>

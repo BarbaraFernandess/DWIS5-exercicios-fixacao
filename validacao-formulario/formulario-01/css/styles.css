@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.main-container{
+    border-radius: 10px;
+    background-color: white;
+    padding: 2rem;
+    
+}
+
+#f1{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input{
+    border-radius: 3px;
+    border: solid 1px #151718;
+    font-size: 20px;
+}
+label{
+    font-size: 20px;
+    text-align: left;
+}
+
+input[type=submit]{
+    border-radius: 3px;
+    font-size: 20px;
+    padding: 0.25rem 0.5rem;
+    margin-top: 10px;
+    color: aliceblue;
+    border: transparent;
+    background: linear-gradient(-45deg, rgba(238, 119, 82, 0.7), rgba(231, 60, 126, 0.7), rgba(35, 166, 213, 0.7), rgba(35, 213, 171, 0.7));
+}
+input[type=file]{
+    border: none;
+}
